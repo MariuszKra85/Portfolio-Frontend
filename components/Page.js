@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import GlobalStyle from './style/GlobalStyle';
 import TopBar from './TopBar';
 
@@ -20,3 +21,7 @@ export default function Page({ children }) {
     </Wrapper>
   );
 }
+
+Page.propTypes = {
+  children: PropTypes.any,
+};

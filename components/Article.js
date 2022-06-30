@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const WrapperArticle = styled.article`
   padding-top: 2rem;
   border-bottom: 2px solid rgba(100, 100, 100, 0.1);
+  margin-right: 3rem;
   h4 {
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -18,7 +19,7 @@ const WrapperArticle = styled.article`
   a {
     text-transform: uppercase;
     display: inline-block;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     font-size: 1.3rem;
     border-bottom: 1px solid var(--textWhite);
   }

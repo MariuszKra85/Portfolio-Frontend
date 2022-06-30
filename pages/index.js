@@ -7,10 +7,14 @@ import Follow from '../components/Follow';
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18rem;
+  gap: 20rem;
 
   section {
     position: relative;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    gap: 15rem;
   }
 `;
 

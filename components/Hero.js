@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   color: var(--textWhite);
-  margin: 10rem 0rem 8rem 5rem;
+  margin: 14rem 0rem 8rem 5rem;
   div {
     width: 10rem;
     height: 0.6rem;
     background-color: var(--yellow);
   }
   h1 {
-    font-size: 5rem;
+    margin: 3rem 0;
+    font-size: 4rem;
   }
   p {
     font-size: 1.3rem;
