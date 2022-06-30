@@ -13,21 +13,29 @@ const GlobalStyle = createGlobalStyle`
 html{
    --grey: #2d3039;
    --darkGrey: #1b1e23;
-    --yeallow: #ffd829;
+    --yellow: #ffd829;
+    --textWhite: #d5d5d5;
 
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
   Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
   padding: 0;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 10px;
   line-height: 1.5;
-  body{
-  margin: 0;
+  
+body{
+    background-color: var(--grey);
+    margin: 0;
+    box-sizing: border-box;
+
 }
 a{
   text-decoration: none;
   color: var(--white)
+}
+p{
+  margin: 0;
 }
 button{
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
