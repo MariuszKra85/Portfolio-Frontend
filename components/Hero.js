@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   color: var(--textWhite);
-  margin: 10rem 0rem 8rem 5rem;
+  margin: 10rem 0rem 8rem 3rem;
+  position: relative;
+  overflow: hidden;
 
   h1 {
     position: relative;
@@ -27,13 +29,14 @@ const Line = styled.div`
 const BgWrapper = styled.div`
   position: absolute;
   top: 0;
+  right: 0;
   width: 350px;
   height: 250px;
+  overflow: hidden;
   :before {
     content: ' ';
 
     position: absolute;
-    left: 2rem;
     top: -10rem;
     width: 100%;
     height: 100%;

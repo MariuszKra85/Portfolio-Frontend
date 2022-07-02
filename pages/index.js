@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-import { useEffect } from 'react';
-import Hero from '../components/Hero';
-import ButtonRound from '../components/ButtonRound';
-import Article from '../components/Article';
-import Follow from '../components/Follow';
+import PropTypes from 'prop-types';
 import MobileHome from '../components/MobileHome';
 
 const Wrapper = styled.div`
@@ -37,3 +33,7 @@ export default function HomePage({ windowSize }) {
 
   return <>{witchDevice()}</>;
 }
+
+HomePage.propTypes = {
+  windowSize: PropTypes.object,
+};

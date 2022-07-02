@@ -9,7 +9,10 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
 
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 html{
    --grey: #2d3039;
    --darkGrey: #1b1e23;
@@ -19,25 +22,18 @@ html{
     font-family: 'Consolas', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
   Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
-  padding: 0;
-  margin: 0;
   font-size: 13px;
   line-height: 1.5;
   @media only screen and (max-width: 1150px) {
   font-size: 10px;
-  }
-  @media only screen and (max-width: 850px) {
-  font-size: 8px;
-  }
-  @media only screen and (max-width: 650px) {
-  
+  scroll-behavior: smooth;
+  width: 99vw;
+  box-sizing:border-box;
   }
   
   
 body{
-    background-color: var(--grey);
-    margin: 0;
-    box-sizing: border-box;
+    background-color: var(--darkGrey);
 
 }
 a{
@@ -53,7 +49,6 @@ button{
 }
 ul{
   list-style: none;
-  margin: 0;
 }
 }
 

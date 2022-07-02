@@ -8,6 +8,7 @@ const WrapperArticle = styled.article`
   margin-left: 3rem;
   position: relative;
   z-index: 3;
+  overflow: hidden;
   h4 {
     position: relative;
     font-size: 1.6rem;
@@ -38,9 +39,9 @@ const WrapperArticle = styled.article`
     background-repeat: no-repeat;
     position: absolute;
     border-radius: 2rem;
-    top: -10px;
+    top: 0px;
     right: 0px;
-    transform: translateX(20px);
+
     opacity: 0.4;
     width: 220px;
     height: 150px;

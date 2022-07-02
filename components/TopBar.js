@@ -4,21 +4,22 @@ import styled from 'styled-components';
 import { Burger, Menu } from './BurgerMenu';
 
 const Wrapper = styled.section`
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   padding: 2rem 1rem;
   background-color: var(--darkGrey);
   display: flex;
   justify-content: space-between;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
   color: var(--textWhite);
   z-index: 200;
   div {
-    margin-top: 0.2rem;
     font-weight: 600;
     span {
       color: var(--yellow);
-      font-size: 2.8rem;
+      font-size: 2.7rem;
       margin-left: 1rem;
     }
   }

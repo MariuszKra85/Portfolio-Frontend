@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledBurger = styled.button`
   position: absolute;
   top: 2.2rem;
-  right: 3rem;
+  right: 4rem;
   flex-direction: column;
   justify-content: space-around;
   width: 3rem;
@@ -54,10 +54,9 @@ const StyledMenu = styled.div`
   justify-content: center;
   background: #effffa;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-  height: 100vh;
+  height: 110vh;
   text-align: left;
-  padding: 0 6rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
@@ -69,7 +68,7 @@ const StyledMenu = styled.div`
   }
 
   @media (max-width: 576px) {
-    width: 100%;
+    width: 110%;
 
     background-color: rgba(245, 245, 245, 0.95);
   }
