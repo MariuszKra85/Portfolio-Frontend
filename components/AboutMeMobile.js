@@ -25,7 +25,7 @@ const TitleWrapper = styled.div`
     content: ' ';
     width: 80%;
     height: 2px;
-    background-color: rgba(200, 200, 200, 0.2);
+    background-color: rgba(239, 202, 37, 0.3);
     position: absolute;
     bottom: 0;
     right: 0;

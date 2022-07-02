@@ -38,9 +38,10 @@ const WrapperArticle = styled.article`
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    border-radius: 2rem;
-    top: 0px;
+    border-radius: 1rem;
+    top: 10px;
     right: 0px;
+    transform: translateX(25px);
 
     opacity: 0.4;
     width: 220px;

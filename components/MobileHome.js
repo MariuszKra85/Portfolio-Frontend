@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import AboutMeMobile from './AboutMeMobile';
 import Article from './Article';
+import Follow from './Follow';
 import Hero from './Hero';
+import PortfolioMobile from './PortfolioMobile';
 
 const Wrapper = styled.section`
   position: relative;
@@ -25,6 +27,8 @@ export default function MobileHome() {
         img="/static/bg_mobile.jpg"
       />
       <AboutMeMobile />
+      <PortfolioMobile />
+      <Follow />
     </Wrapper>
   );
 }
