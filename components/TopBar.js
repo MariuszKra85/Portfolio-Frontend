@@ -12,16 +12,18 @@ const Wrapper = styled.section`
   font-size: 2.4rem;
   font-weight: 400;
   color: var(--textWhite);
+  z-index: 200;
   div {
+    margin-top: 0.2rem;
     font-weight: 600;
     span {
       color: var(--yellow);
       font-size: 2.8rem;
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   }
   nav {
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
     font-size: 2rem;
 
     a {
@@ -44,11 +46,10 @@ const Wrapper = styled.section`
 
 export default function TopBar() {
   const [open, setOpen] = useState(false);
-  console.log(open);
   return (
     <Wrapper>
       <div>
-        {'</>'}
+        <img src="/static/coder.png" alt="coder" width="100px" />
         <span>M</span>ariusz Krawczyk
       </div>
 

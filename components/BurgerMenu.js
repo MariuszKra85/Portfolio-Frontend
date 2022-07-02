@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledBurger = styled.button`
   position: absolute;
-  top: 3rem;
+  top: 2.2rem;
   right: 3rem;
   flex-direction: column;
   justify-content: space-around;
@@ -98,14 +98,12 @@ const StyledMenu = styled.div`
 const Burger = ({ open, setOpen }) => (
   <StyledBurger open={open} onClick={() => setOpen(!open)}>
     <div />
-    {console.log(open)}
     <div />
     <div />
   </StyledBurger>
 );
 const Menu = ({ open }) => (
   <StyledMenu open={open}>
-    {console.log(open)}
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/projects">Projects</a>

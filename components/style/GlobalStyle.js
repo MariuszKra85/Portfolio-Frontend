@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 html{
    --grey: #2d3039;
    --darkGrey: #1b1e23;
-    --yellow: #ffd829;
+    --yellow: #efca25;
     --textWhite: #d5d5d5;
 
     font-family: 'Consolas', -apple-system, BlinkMacSystemFont, 'Segoe UI', 

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
 import Hero from '../components/Hero';
 import ButtonRound from '../components/ButtonRound';
 import Article from '../components/Article';
 import Follow from '../components/Follow';
+import MobileHome from '../components/MobileHome';
 
 const Wrapper = styled.div`
   display: grid;
@@ -16,30 +18,22 @@ const Wrapper = styled.div`
   @media only screen and (max-width: 1000px) {
     gap: 15rem;
   }
+  @media only screen and (max-width: 500px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+  }
 `;
 
-export default function HomePage() {
-  return (
-    <Wrapper>
-      <section>
-        <Hero />
-        <ButtonRound />
-      </section>
-      <section>
-        <Article
-          title="about me"
-          content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea nobis sunt ipsam ad dolore enim numquam itaque ex veritatis suscipit. Accusantium nobis consequuntur dolor sit tempore similique soluta repellat ipsa?"
-          link="/about"
-          linkText="Learn More"
-        />
-        <Article
-          title="My work"
-          content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea nobis sunt ipsam ad dolore enim numquam itaque ex veritatis suscipit. "
-          link="/project"
-          linkText="My Portfolio"
-        />
-        <Follow />
-      </section>
-    </Wrapper>
-  );
+export default function HomePage({ windowSize }) {
+  const { height, width } = windowSize;
+  console.log(width);
+
+  const witchDevice = () => {
+    if (width < 450) {
+      return <MobileHome />;
+    }
+  };
+
+  return <>{witchDevice()}</>;
 }
