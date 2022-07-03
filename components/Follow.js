@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  margin-top: 3rem;
+  margin: 3rem 0 2rem 2rem;
+
   h3 {
     font-size: 1.4rem;
     text-transform: uppercase;

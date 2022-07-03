@@ -101,12 +101,20 @@ const Burger = ({ open, setOpen }) => (
     <div />
   </StyledBurger>
 );
-const Menu = ({ open }) => (
+const Menu = ({ open, setOpen }) => (
   <StyledMenu open={open}>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
+    <a href="#top" onClick={() => setOpen(!open)}>
+      Home
+    </a>
+    <a href="#about" onClick={() => setOpen(!open)}>
+      About
+    </a>
+    <a href="#portfolio" onClick={() => setOpen(!open)}>
+      Projects
+    </a>
+    <a href="#contact" onClick={() => setOpen(!open)}>
+      Contact
+    </a>
   </StyledMenu>
 );
 

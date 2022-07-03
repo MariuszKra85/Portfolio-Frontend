@@ -1,17 +1,19 @@
 import styled from 'styled-components';
-import AboutMeMobile from './AboutMeMobile';
+import AboutMeMobile from './MobileAboutMe';
 import Article from './Article';
 import Follow from './Follow';
 import Hero from './Hero';
-import PortfolioMobile from './PortfolioMobile';
+import MobileContact from './MobileContact';
+import PortfolioMobile from './MobilePortfolio';
+import ButtonRound from './ButtonRound';
 
 const Wrapper = styled.section`
   position: relative;
 `;
 
-export default function MobileHome() {
+export default function MobileHome({ scroll }) {
   return (
-    <Wrapper>
+    <Wrapper id="top">
       <Hero />
       <Article
         title="About Me"
@@ -28,7 +30,9 @@ export default function MobileHome() {
       />
       <AboutMeMobile />
       <PortfolioMobile />
+      <MobileContact />
       <Follow />
+      {scroll.scrollY > 0 ? <ButtonRound visible /> : <ButtonRound />}
     </Wrapper>
   );
 }

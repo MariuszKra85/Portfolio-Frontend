@@ -1,37 +1,14 @@
 import styled from 'styled-components';
+import TitleSection from './TitleSection';
 
 const Wrapper = styled.section`
   max-width: 100vw;
   background-color: var(--grey);
-  padding: 0rem 2rem 2rem;
+  padding: 0rem 0 2rem 2rem;
   line-height: 1.5;
   overflow: hidden;
 `;
 
-const TitleWrapper = styled.div`
-  font-size: 2rem;
-  display: flex;
-  position: relative;
-  width: 100%;
-  h2 {
-    margin: 1rem 0;
-  }
-  p {
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0;
-  }
-  ::after {
-    content: ' ';
-    width: 80%;
-    height: 2px;
-    background-color: rgba(239, 202, 37, 0.3);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: -3rem;
-  }
-`;
 const StyledArticle = styled.article`
   margin: 1rem 0;
   p {
@@ -44,11 +21,9 @@ const StyledArticle = styled.article`
 
 export default function AboutMeMobile() {
   return (
-    <Wrapper>
-      <TitleWrapper>
-        <h2>About Me.</h2>
-        <p>01</p>
-      </TitleWrapper>
+    <Wrapper id="about">
+      <TitleSection title="About Me." number="01" />
+
       <StyledArticle>
         <span>1.1</span>
         <p>
