@@ -27,6 +27,16 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
   }
 `;
+const DisplayProject = styled.div`
+  @media only screen and (min-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    span {
+      margin-left: 2rem;
+    }
+  }
+`;
 
 export default function PortfolioMobile() {
   const { data, error, loading } = useQuery(ALL_PROJECT_DATA);
@@ -38,13 +48,14 @@ export default function PortfolioMobile() {
   return (
     <Wrapper id="portfolio">
       <TitleSection title="Portfolio" number="02" />
-
-      {allProjects.map((e, index) => (
-        <>
-          <span>2.{index + 1}</span>
-          <ProjectCard Project={e} key={e.id} />
-        </>
-      ))}
+      <DisplayProject>
+        {allProjects.map((e, index) => (
+          <div>
+            <span>2.{index + 1}</span>
+            <ProjectCard Project={e} key={e.id} />
+          </div>
+        ))}
+      </DisplayProject>
     </Wrapper>
   );
 }

@@ -8,7 +8,6 @@ const Wrapper = styled.section`
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;
-  min-height: 100vh;
   background-color: var(--darkGrey);
   color: var(--textWhite);
 `;
@@ -34,7 +33,7 @@ export default function Page({ children }) {
   }, []);
   return (
     <Wrapper>
-      <TopBar />
+      <TopBar windowSize={windowSize} />
       <GlobalStyle />
       {cloneElement(children, { windowSize })}
     </Wrapper>

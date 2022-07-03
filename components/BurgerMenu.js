@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledBurger = styled.button`
@@ -15,7 +16,7 @@ const StyledBurger = styled.button`
   z-index: 99;
   display: none;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 740px) {
     display: flex;
   }
 
@@ -52,19 +53,21 @@ const StyledBurger = styled.button`
 const StyledMenu = styled.div`
   flex-direction: column;
   justify-content: center;
-  background: #effffa;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 110vh;
   text-align: left;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 1.7rem;
+  right: 2rem;
   transition: transform 0.3s ease-in-out;
   z-index: 98;
-  display: none;
 
-  @media (max-width: 700px) {
+  @media (max-width: 740px) {
+    top: 0;
+    left: 0;
+    width: 13rem;
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
     display: flex;
+    background: #effffa;
   }
 
   @media (max-width: 576px) {
@@ -75,13 +78,15 @@ const StyledMenu = styled.div`
 
   a {
     font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 2rem 0 0 2rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #0d0c1d;
+    letter-spacing: 0.3rem;
+
     text-decoration: none;
     transition: color 0.3s linear;
+    @media (max-width: 700px) {
+      color: #0d0c1d;
+    }
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
@@ -101,20 +106,33 @@ const Burger = ({ open, setOpen }) => (
     <div />
   </StyledBurger>
 );
-const Menu = ({ open, setOpen }) => (
+const Menu = ({ open, setOpen, windowSize }) => (
   <StyledMenu open={open}>
-    <a href="#top" onClick={() => setOpen(!open)}>
-      Home
-    </a>
-    <a href="#about" onClick={() => setOpen(!open)}>
-      About
-    </a>
-    <a href="#portfolio" onClick={() => setOpen(!open)}>
-      Projects
-    </a>
-    <a href="#contact" onClick={() => setOpen(!open)}>
-      Contact
-    </a>
+    {windowSize?.width < 770 ? (
+      <>
+        {' '}
+        <a href="#top" onClick={() => setOpen(!open)}>
+          Home
+        </a>
+        <a href="#about" onClick={() => setOpen(!open)}>
+          About
+        </a>
+        <a href="#portfolio" onClick={() => setOpen(!open)}>
+          Projects
+        </a>
+        <a href="#contact" onClick={() => setOpen(!open)}>
+          Contact
+        </a>
+      </>
+    ) : (
+      <>
+        {' '}
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/projects">Project</Link>
+        <Link href="/contact">Contact</Link>
+      </>
+    )}
   </StyledMenu>
 );
 

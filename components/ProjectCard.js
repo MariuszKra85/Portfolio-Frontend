@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 80%;
+  max-width: 300px;
   margin: 1rem auto;
   border: 2px solid rgba(200, 200, 200, 0.3);
   position: relative;
@@ -36,7 +37,6 @@ const LinkImg = styled.img`
 `;
 
 export default function ProjectCard({ Project }) {
-  console.log(Project.photo?.photo.publicUrlTransformed);
   return (
     <Wrapper>
       <h2>{Project.name}</h2>

@@ -45,8 +45,9 @@ const Wrapper = styled.section`
   }
 `;
 
-export default function TopBar() {
+export default function TopBar({ windowSize }) {
   const [open, setOpen] = useState(false);
+
   return (
     <Wrapper>
       <div>
@@ -54,14 +55,9 @@ export default function TopBar() {
         <span>M</span>ariusz Krawczyk
       </div>
 
-      <nav>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/projects">Project</Link>
-        <Link href="/contact">Contact</Link>
-      </nav>
+      <nav />
       <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} windowSize={windowSize} />
     </Wrapper>
   );
 }
